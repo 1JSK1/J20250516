@@ -1,0 +1,315 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: #f9f3f5;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}  
+
+/* 头部样式 */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f8e1eb 0%, #e6f0fd 100%);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 3rem;
+    color: #d6688e;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+}
+
+/* 部分通用样式 */
+section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #d6688e;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+h3 {
+    color: #6c8cbf;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* 心情追踪器 */
+.mood-tracker {
+    text-align: center;
+}
+
+.mood-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mood {
+    background-color: #fff;
+    border: 2px solid #e6f0fd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mood:hover {
+    background-color: #f8e1eb;
+    border-color: #d6688e;
+}
+
+.mood.selected {
+    background-color: #d6688e;
+    color: white;
+    border-color: #d6688e;
+}
+
+#mood-message {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8e1eb;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* 名言部分 */
+.quote-section {
+    background-color: #e6f0fd;
+}
+
+.quote-container {
+    text-align: center;
+}
+
+.quote {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #6c8cbf;
+}
+
+#new-quote {
+    background-color: #6c8cbf;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new-quote:hover {
+    background-color: #5a75a5;
+}
+
+/* 建议卡片 */
+.advice-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 放松部分 */
+.relaxation-container {
+    display: flex;
+    justify-content: center;
+}
+
+.relaxation-exercise {
+    text-align: center;
+    max-width: 500px;
+}
+
+.breathing-animation {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 30px auto;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    background-color: #f8e1eb;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    opacity: 0.7;
+}
+
+.breathing-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #d6688e;
+    font-weight: 500;
+}
+
+.circle.animate {
+    animation: breathe 4s infinite alternate ease-in-out;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        background-color: #f8e1eb;
+    }
+    50% {
+        transform: scale(1.3);
+        background-color: #e6f0fd;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #f8e1eb;
+    }
+}
+
+#start-breathing {
+    background-color: #d6688e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-breathing:hover {
+    background-color: #c25579;
+}
+
+/* 鼓励部分 */
+.encouragement-section {
+    text-align: center;
+}
+
+#self-note {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border: 2px solid #e6f0fd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans SC', sans-serif;
+    resize: none;
+}
+
+#self-note:focus {
+    outline: none;
+    border-color: #d6688e;
+}
+
+#save-note {
+    background-color: #d6688e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save-note:hover {
+    background-color: #c25579;
+}
+
+#saved-message {
+    margin-top: 15px;
+    color: #6c8cbf;
+    font-weight: 500;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #7a7a7a;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* 通用类 */
+.hidden {
+    display: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mood-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mood {
+        width: 80%;
+    }
+    
+    .advice-cards {
+        grid-template-columns: 1fr;
+    }
+}
