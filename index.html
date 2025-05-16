@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职场暖心站 - 致CYF</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>职场暖心站</h1>
+            <p class="subtitle">致CYF</p>
+        </header>
+
+        <section class="mood-tracker">
+            <h2>今天的心情如何？</h2>
+            <div class="mood-buttons">
+                <button class="mood" data-mood="happy">😊 开心</button>
+                <button class="mood" data-mood="tired">😫 疲惫</button>
+                <button class="mood" data-mood="stressed">😰 压力大</button>
+                <button class="mood" data-mood="sad">😢 难过</button>
+                <button class="mood" data-mood="motivated">💪 有动力</button>
+            </div>
+            <div id="mood-message" class="hidden"></div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-container">
+                <p id="quote" class="quote">每一次努力都是成长，每一次坚持都是收获。</p>
+                <button id="new-quote">换一句</button>
+            </div>
+        </section>
+
+        <section class="advice-section">
+            <h2>职场小贴士</h2>
+            <div class="advice-cards">
+                <div class="card">
+                    <h3>工作与生活平衡</h3>
+                    <p>记得为自己设定边界，下班后尝试关闭工作邮件，给自己留出真正的休息时间。</p>
+                </div>
+                <div class="card">
+                    <h3>自我关爱</h3>
+                    <p>每天给自己10分钟的独处时间，可以冥想、深呼吸或只是静静地喝一杯茶。</p>
+                </div>
+                <div class="card">
+                    <h3>职场人际</h3>
+                    <p>建立支持性的职场关系网络，找到可以倾诉和互相支持的同事。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="relaxation-section">
+            <h2>放松一下</h2>
+            <div class="relaxation-container">
+                <div class="relaxation-exercise">
+                    <h3>一分钟呼吸练习</h3>
+                    <p>跟随下面的动画，深呼吸30秒，让紧张情绪得到释放。</p>
+                    <div class="breathing-animation">
+                        <div class="circle"></div>
+                        <p class="breathing-text">吸气...</p>
+                    </div>
+                    <button id="start-breathing">开始</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="encouragement-section">
+            <h2>写给自己的一段话</h2>
+            <textarea id="self-note" placeholder="亲爱的自己，今天你做得很棒..."></textarea>
+            <button id="save-note">保存</button>
+            <div id="saved-message" class="hidden">已保存！每次你需要鼓励时，这段话都会在这里等你。</div>
+        </section>
+
+        <footer>
+            <p>记住，你不是一个人在战斗。每一个奋斗的日子，都值得被温柔以待。</p>
+            <p class="copyright">© 2025 职场暖心站</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
